@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLINX | Multi-Gaming Esports Clan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        siege: {
+                            dark: '#0b0f19',
+                            card: '#131c2e',
+                            accent: '#00f2fe',
+                            neon: '#00c6ff',
+                            orange: '#ff5722'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Rajdhani', 'sans-serif'],
+                        mono: ['Share Tech Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .cyber-border {
+            clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+        }
+        .bg-grid {
+            background-image: linear-gradient(to right, rgba(0, 242, 254, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(0, 242, 254, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body class="bg-siege-dark text-gray-100 font-sans min-h-screen bg-grid selection:bg-siege-accent selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-siege-dark/90 backdrop-blur-md border-b border-siege-accent/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-lg bg-siege-accent/10 border border-siege-accent flex items-center justify-center text-siege-accent shadow-[0_0_15px_rgba(0,242,254,0.4)]">
+                    <i class="fas fa-crosshairs text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-bold tracking-wider text-white font-mono">GLINX</span>
+                    <span class="block text-xs text-siege-accent tracking-widest uppercase">EST. 2023</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="hover:text-siege-accent transition-colors tracking-wide font-semibold">ABOUT</a>
+                <a href="#roster" class="hover:text-siege-accent transition-colors tracking-wide font-semibold">ROSTERS</a>
+                <a href="#intel" class="hover:text-siege-accent transition-colors tracking-wide font-semibold">INTEL</a>
+                <a href="https://discord.gg/ajafcASF4G" target="_blank" class="cyber-border bg-siege-accent text-black px-6 py-2.5 font-bold tracking-wider hover:bg-white transition-all shadow-[0_0_20px_rgba(0,242,254,0.4)] flex items-center space-x-2">
+                    <i class="fab fa-discord"></i>
+                    <span>DISCORD</span>
+                </a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-2xl text-siege-accent focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-siege-card border-b border-siege-accent/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 hover:text-siege-accent font-semibold">ABOUT</a>
+            <a href="#roster" class="block py-2 hover:text-siege-accent font-semibold">ROSTERS</a>
+            <a href="#intel" class="block py-2 hover:text-siege-accent font-semibold">INTEL</a>
+            <a href="https://discord.gg/ajafcASF4G" target="_blank" class="inline-flex items-center space-x-2 bg-siege-accent text-black px-5 py-2 font-bold w-full justify-center">
+                <i class="fab fa-discord"></i>
+                <span>JOIN DISCORD</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-siege-accent/10 via-transparent to-siege-dark pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 bg-siege-card border border-siege-accent/30 px-4 py-1.5 rounded-full text-siege-accent text-sm font-mono">
+                    <span class="w-2 h-2 rounded-full bg-siege-accent animate-pulse"></span>
+                    <span>MULTI-GAMING ESPORTS ORGANIZATION</span>
+                </div>
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight uppercase">
+                    DOMINATE <span class="text-transparent bg-clip-text bg-gradient-to-r from-siege-accent to-siege-neon">EVERY TITLE</span>
+                </h1>
+                <p class="text-gray-400 text-lg max-w-xl mx-auto lg:mx-0">
+                    Precision, teamwork, and tactical execution across CS2, Apex Legends, Rainbow Six Siege, and Valorant. Established in 2023.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                    <a href="https://discord.gg/ajafcASF4G" target="_blank" class="w-full sm:w-auto text-center cyber-border bg-siege-accent text-black px-8 py-4 font-extrabold tracking-wider hover:bg-white transition-all shadow-[0_0_25px_rgba(0,242,254,0.5)] flex items-center justify-center space-x-3 text-lg">
+                        <i class="fab fa-discord text-xl"></i>
+                        <span>JOIN OUR DISCORD</span>
+                    </a>
+                    <a href="#roster" class="w-full sm:w-auto text-center cyber-border bg-siege-card border border-siege-accent/40 text-white px-8 py-4 font-bold tracking-wider hover:border-siege-accent transition-all text-lg">
+                        VIEW ROSTERS
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="relative w-72 h-72 sm:w-96 sm:h-96 cyber-border p-2 bg-gradient-to-br from-siege-accent/30 via-siege-card to-siege-dark border-2 border-siege-accent shadow-[0_0_40px_rgba(0,242,254,0.3)] flex items-center justify-center">
+                    <div class="w-full h-full cyber-border overflow-hidden bg-black flex flex-col items-center justify-center relative p-8 text-center space-y-4">
+                        <div class="absolute inset-0 bg-siege-accent/10 mix-blend-overlay"></div>
+                        <i class="fas fa-shield-alt text-6xl text-siege-accent animate-pulse"></i>
+                        <h2 class="text-4xl font-black font-mono tracking-widest text-white">GLINX</h2>
+                        <div class="w-16 h-1 bg-siege-accent"></div>
+                        <p class="text-xs font-mono text-siege-accent tracking-widest uppercase">EST. 2023 • MULTI-ESPORTS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Clan Info / About -->
+    <section id="about" class="py-20 bg-siege-card/30 border-y border-siege-accent/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <h2 class="text-3xl sm:text-4xl font-black uppercase tracking-wider">CLAN <span class="text-siege-accent">INTEL</span></h2>
+                <p class="text-gray-400">Founded in 2023, GLINX is a multi-gaming esports clan driven by tactical precision and competitive excellence.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="cyber-border bg-siege-card p-8 border border-siege-accent/20 hover:border-siege-accent/60 transition-all space-y-4">
+                    <div class="w-12 h-12 rounded bg-siege-accent/10 flex items-center justify-center text-siege-accent text-2xl">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tracking-wide">TACTICAL EXCELLENCE</h3>
+                    <p class="text-gray-400 text-sm">Structured IGL calls, disciplined positioning, and flawless team coordination.</p>
+                </div>
+                <div class="cyber-border bg-siege-card p-8 border border-siege-accent/20 hover:border-siege-accent/60 transition-all space-y-4">
+                    <div class="w-12 h-12 rounded bg-siege-accent/10 flex items-center justify-center text-siege-accent text-2xl">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tracking-wide">COMPETITIVE DRIVE</h3>
+                    <p class="text-gray-400 text-sm">Active rosters dominating across multiple competitive game titles.</p>
+                </div>
+                <div class="cyber-border bg-siege-card p-8 border border-siege-accent/20 hover:border-siege-accent/60 transition-all space-y-4">
+                    <div class="w-12 h-12 rounded bg-siege-accent/10 flex items-center justify-center text-siege-accent text-2xl">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tracking-wide">COMMUNITY DRIVEN</h3>
+                    <p class="text-gray-400 text-sm">An active Discord community hosting regular sessions, stacks, and events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rosters By Game Section -->
+    <section id="roster" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-siege-accent font-mono text-sm tracking-widest uppercase">DIVISION SQUADS</span>
+                <h2 class="text-3xl sm:text-4xl font-black uppercase tracking-wider">GAME <span class="text-siege-accent">ROSTERS</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Counter-Strike 2 -->
+                <div class="cyber-border bg-siege-card p-8 border border-siege-accent/30 hover:border-siege-accent transition-all space-y-6">
+                    <div class="flex items-center space-x-3 border-b border-siege-accent/20 pb-4">
+                        <div class="text-siege-accent text-2xl"><i class="fas fa-bomb"></i></div>
+                        <h3 class="text-2xl font-black font-mono tracking-wider">COUNTER-STRIKE 2</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between bg-siege-dark/50 p-4 rounded border border-siege-accent/10">
+                            <div>
+                                <span class="text-lg font-bold font-mono text-white">n0rt</span>
+                                <span class="block text-xs text-siege-accent font-mono">IGL</span>
+                            </div>
+                            <span class="text-xs bg-siege-accent/20 text-siege-accent px-2.5 py-1 rounded font-mono">ACTIVE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Apex Legends -->
+                <div class="cyber-border bg-siege-card p-8 border border-siege-accent/30 hover:border-siege-accent transition-all space-y-6">
+                    <div class="flex items-center space-x-3 border-b border-siege-accent/20 pb-4">
+                        <div class="text-siege-accent text-2xl"><i class="fas fa-wind"></i></div>
+                        <h3 class="text-2xl font-black font-mono tracking-wider">APEX LEGENDS</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between bg-siege-dark/50 p-4 rounded border border-siege-accent/10">
+                            <div>
+                                <span class="text-lg font-bold font-mono text-white">tom2flames</span>
+                                <span class="block text-xs text-siege-accent font-mono">IGL</span>
+                            </div>
+                            <span class="text-xs bg-siege-accent/20 text-siege-accent px-2.5 py-1 rounded font-mono">ACTIVE</span>
+                        </div>
+                        <div class="flex items-center justify-between bg-siege-dark/50 p-4 rounded border border-siege-accent/10">
+                            <div>
+                                <span class="text-lg font-bold font-mono text-white">n0rt</span>
+                                <span class="block text-xs text-gray-400 font-mono">Follower</span>
+                            </div>
+                            <span class="text-xs bg-siege-accent/20 text-siege-accent px-2.5 py-1 rounded font-mono">ACTIVE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rainbow Six Siege -->
+                <div class="cyber-border bg-siege-card p-8 border border-siege-accent/30 hover:border-siege-accent transition-all space-y-6">
+                    <div class="flex items-center space-x-3 border-b border-siege-accent/20 pb-4">
+                        <div class="text-siege-accent text-2xl"><i class="fas fa-crosshairs"></i></div>
+                        <h3 class="text-2xl font-black font-mono tracking-wider">RAINBOW SIX SIEGE</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between bg-siege-dark/50 p-4 rounded border border-siege-accent/10">
+                            <div>
+                                <span class="text-lg font-bold font-mono text-white">tom2flames</span>
+                                <span class="block text-xs text-siege-accent font-mono">IGL / Entry Fragger</span>
+                            </div>
+                            <span class="text-xs bg-siege-accent/20 text-siege-accent px-2.5 py-1 rounded font-mono">ACTIVE</span>
+                        </div>
+                        <div class="flex items-center justify-between bg-siege-dark/50 p-4 rounded border border-siege-accent/10">
+                            <div>
+                                <span class="text-lg font-bold font-mono text-white">meowdestroyer</span>
+                                <span class="block text-xs text-siege-orange font-mono">Defence</span>
+                            </div>
+                            <span class="text-xs bg-siege-orange/20 text-siege-orange px-2.5 py-1 rounded font-mono">ACTIVE</span>
+                        </div>
+                        <div class="flex items-center justify-between bg-siege-dark/50 p-4 rounded border border-siege-accent/10">
+                            <div>
+                                <span class="text-lg font-bold font-mono text-white">n0rt</span>
+                                <span class="block text-xs text-siege-accent font-mono">Full Attack</span>
+                            </div>
+                            <span class="text-xs bg-siege-accent/20 text-siege-accent px-2.5 py-1 rounded font-mono">ACTIVE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Valorant -->
+                <div class="cyber-border bg-siege-card p-8 border border-siege-accent/30 hover:border-siege-accent transition-all space-y-6">
+                    <div class="flex items-center space-x-3 border-b border-siege-accent/20 pb-4">
+                        <div class="text-siege-accent text-2xl"><i class="fas fa-bolt"></i></div>
+                        <h3 class="text-2xl font-black font-mono tracking-wider">VALORANT</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between bg-siege-dark/50 p-4 rounded border border-siege-accent/10">
+                            <div>
+                                <span class="text-lg font-bold font-mono text-white">n0rt</span>
+                                <span class="block text-xs text-siege-accent font-mono">IGL</span>
+                            </div>
+                            <span class="text-xs bg-siege-accent/20 text-siege-accent px-2.5 py-1 rounded font-mono">ACTIVE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-gray-400 text-sm mb-4">Want to squad up and try out for GLINX?</p>
+                <a href="https://discord.gg/ajafcASF4G" target="_blank" class="inline-flex items-center space-x-2 text-siege-accent hover:text-white font-mono font-bold tracking-wider underline">
+                    <span>APPLY IN OUR DISCORD SERVER</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intel / Discord Callout -->
+    <section id="intel" class="py-20 bg-gradient-to-t from-siege-card/50 to-siege-dark border-t border-siege-accent/10 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <h2 class="text-4xl font-black uppercase tracking-wider">READY TO <span class="text-siege-accent">SQUAD UP?</span></h2>
+            <p class="text-gray-400 max-w-xl mx-auto">Join our official community Discord server to connect with teammates across all our game rosters.</p>
+            <div class="pt-4">
+                <a href="https://discord.gg/ajafcASF4G" target="_blank" class="cyber-border bg-siege-accent text-black px-10 py-5 font-extrabold tracking-wider hover:bg-white transition-all shadow-[0_0_30px_rgba(0,242,254,0.5)] inline-flex items-center space-x-3 text-lg">
+                    <i class="fab fa-discord text-2xl"></i>
+                    <span>CONNECT TO DISCORD</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-siege-accent/20 bg-siege-dark text-center text-gray-500 text-sm font-mono">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg
